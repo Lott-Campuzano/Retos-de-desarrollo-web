@@ -6,11 +6,28 @@
     con diversas propiedades de tamaño dentro de un archivo. "rem" tomara
     como base el tamaño del primer elemento de nuestra hoja de estilos y "em" tomara dicha propiedad
     pero del elemento mas cercano al elemento donde la declaremos)*/
-    height: 4rem;
-    width: 12rem;
+    height: 4em;
+    width: 12em;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: transparent;
+    border: solid black;
+    cursor: pointer;
+}
 
+.envoltorio{
+    height: 2em;
+    width: 8em;
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-boton{
+    font-family: "JetBrains Mono", monospace;
+    font-size: 17px;
 
 }
