@@ -1,0 +1,16 @@
+.boton{
+    /*En las propiedades "height" que se traduce como alto y
+    "width" que se traduce como ancho se empleo la unidad "rem" que es una unidad relativa
+    al elemento raiz de nuestro proyecto, no se uso "em" que tambien es una unidad relativa
+    pero relacionada al elemento mas cercano (En terminos simples si tenemos muchos elementos
+    con diversas propiedades de tamaño dentro de un archivo. "rem" tomara
+    como base el tamaño del primer elemento de nuestra hoja de estilos y "em" tomara dicha propiedad
+    pero del elemento mas cercano al elemento donde la declaremos)*/
+    height: 4rem;
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
