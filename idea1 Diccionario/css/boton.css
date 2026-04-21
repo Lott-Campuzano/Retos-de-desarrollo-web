@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;
     background: transparent;
-    border: solid black;
+    border: 0px solid black;
     cursor: pointer;
 }
 
@@ -28,6 +28,138 @@
 
 .texto-boton{
     font-family: "JetBrains Mono", monospace;
-    font-size: 17px;
-
+    font-size: 16px;
+    z-index: 1;
+    color: #010101;
+    padding: 5px 20px;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(2px);
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+    transition: grid-template-columns 0.2s ease;
 }
+
+.flor{
+    display: grid;
+    grid-template-columns: 1em 1em;
+    position: absolute;
+    transition: grid-template-columns 0.8s ease;
+}
+
+.flor1{
+    top: -12px;
+    left: -13px;
+    transform: rotate(5deg);
+}
+
+.flor2{
+    bottom: -5px;
+    left: 8px;
+    transform: rotate(35deg);
+}
+
+.flor3{
+    bottom: -15px;
+    transform: rotate(0deg);
+}
+
+.flor4{
+    top: -14px;
+    transform: rotate(15deg);
+}
+
+.flor5{
+    right: 11px;
+    top: -3px;
+    transform: rotate(25deg);
+}
+
+.flor6{
+    right: -15px;
+    bottom: -15px;
+    transform: rotate(30deg);
+}
+
+.petalo{
+    height: 2em;
+    width: 1em;
+    border-radius: 10% 100% / 100% 100%;
+    background: linear-gradient(#8338ec, #3a86ff);
+    border: 0.5px solid #8338EC;
+    z-index: 0;
+    transition: width 0.2s ease, height 0.2s ease;
+}
+
+.uno{transform: rotate(0deg);}
+.dos{transform: rotate(90deg);}
+.tres{transform: rotate(270deg);}
+.cuatro{transform: rotate(180deg);}
+
+.boton:hover .petalo{
+    background: linear-gradient(#ff006e, #ffbe0b);
+    border: 0.5px solid #fb5607;
+}
+
+.boton:hover .flor{grid-template-columns: 1.5em 1.5em;}
+
+.boton:hover .flor .petalo{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.boton:hover .texto-boton{background: rgba(255, 255, 255, 0.4);}
+
+.boton:hover div.flor1{
+    animation: 15s linear 0.2s normal none infinite running flor1;
+}
+
+@keyframes flor1 {
+    0% { transform: rotate(5deg); }
+    100% { transform: rotate(365deg); }
+}
+
+.boton:hover div.flor2{
+    animation: 13s linear 0.2s normal none infinite running flor2;
+}
+
+@keyframes flor2 {
+    0% { transform: rotate(35deg); }
+    100% { transform: rotate(-325deg); }
+}
+
+.boton:hover div.flor3{
+    animation: 16s linear 0.2s normal none infinite running flor3;
+}
+
+@keyframes flor3 {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.boton:hover div.flor4{
+    animation: 17s linear 0.2s normal none infinite running flor4;
+}
+
+@keyframes flor4 {
+    0% { transform: rotate(15deg); }
+    100% { transform: rotate(375deg); }
+}
+
+.boton:hover div.flor5{
+    animation: 20s linear 0.2s normal none infinite running flor5;
+}
+
+@keyframes flor5 {
+    0% { transform: rotate(25deg); }
+    100% { transform: rotate(-335deg); }
+}
+
+.boton:hover div.flor6{
+    animation: 15s linear 0.2s normal none infinite running flor6;
+}
+
+@keyframes flor6 {
+    0% { transform: rotate(30deg); }
+    100% { transform: rotate(390deg); }
+}
+
