@@ -28,12 +28,12 @@
 
 .texto-boton{
     font-family: "JetBrains Mono", monospace;
-    font-size: 16px;
+    font-size: 18px;
     z-index: 1;
-    color: #010101;
+    color: var(--fondoOscuro);
     padding: 5px 20px;
     border-radius: 100px;
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--blurClaroInactivo);
     backdrop-filter: blur(2px);
     box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
     transition: grid-template-columns 0.2s ease;
@@ -85,7 +85,7 @@
     width: 1em;
     border-radius: 10% 100% / 100% 100%;
     background: linear-gradient(#8338ec, #3a86ff);
-    border: 0.5px solid #8338EC;
+    border: 0.5px solid #7448f0;
     z-index: 0;
     transition: width 0.2s ease, height 0.2s ease;
 }
@@ -107,7 +107,7 @@
     height: 1.5em;
 }
 
-.boton:hover .texto-boton{background: rgba(255, 255, 255, 0.4);}
+.boton:hover .texto-boton{background: var(--blurClaroActivo);}
 
 .boton:hover div.flor1{
     animation: 15s linear 0.2s normal none infinite running flor1;
