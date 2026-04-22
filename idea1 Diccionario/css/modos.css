@@ -1,38 +1,43 @@
 @media (prefers-color-scheme: dark ){
+    @keyframes flare{
+        from{background: var(--color4);}
+        to{background: var(--color6);}
+    }
+
     .fondo.adaptive{
-        background-color: var(--fondoOscuro);
+        animation-name: flare;
+        animation-duration: 30s;
+        background-color: var(--color4);
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+
+    .contenedor.adaptive{
+        background-color: var(--blurOscuroActivo);
     }
 
     .titulo1.adaptive{
-        display: flex;
-        justify-content: center;
-        font-family: "Atkinson Hyperlegible", sans-serif;
-        font-size: 40px;
-        color: var(--fondoClaro);
+        font-family: var(--fuentePrincipal);
+        color: var(--fondoOscuro);
     }
 
     .titulo2.adaptive{
-        display: flex;
-        justify-content: center;
-        font-family: "Atkinson Hyperlegible", sans-serif;
-        font-size: 35px;
-        color: var(--fondoClaro);
+        font-family: var(--fuentePrincipal);
+        color: var(--fondoOscuro);
     }
 
     .titulo3.adaptive{
-        display: flex;
-        justify-content: start;
-        font-family: "Atkinson Hyperlegible", sans-serif;
-        font-size: 30px;
+        font-family: var(--fuentePrincipal);
         color: var(--fondoClaro);
     }
 
     .subtitulo.adaptive{
         display: flex;
         justify-content: center;
-        font-family: "Atkinson Hyperlegible", sans-serif;
+        font-family: var(--fuentePrincipal);
         font-size: 16px;
-        color: var(--fondoClaro);
+        color: var(--fondoOscuro);
     }
 
     .texto.adaptive{
@@ -41,6 +46,14 @@
         font-family: "JetBrains Mono", monospace;
         font-size: 20px;
         color: var(--fondoClaro);
+    }
+
+    .texto-alternativo.adaptive{
+        display: flex;
+        justify-content: start;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 20px;
+        color: var(--fondoOscuro);
     }
 
     .texto-boton.adaptive{

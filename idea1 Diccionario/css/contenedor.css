@@ -11,40 +11,69 @@
     --blurClaroActivo: rgba(255, 255, 255, 0.4);
     --blurOscuroInactivo: rgba(0, 0, 0, 0.8);
     --blurOscuroActivo: rgba(0, 0, 0, 0.4);
+    --fuentePrincipal: "Atkinson Hyperlegible", sans-serif;
+    --fuenteSecundaria: "JetBrains Mono", monospace;
 }
 
-.fondo-claro{
-    background-color: var(--fondoClaro);
+@keyframes glow{
+    from{background: var(--color3);}
+    to{background: var(--color1);}
 }
+
+.fondo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    animation-name: glow;
+    animation-duration: 30s;
+    background-color: var(--color3);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 
 .contenedor{
     display: flex;
+    min-width: 300px;
+    min-height: 300px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: var(--blurClaroActivo);
+    backdrop-filter: blur(2px);
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+    margin: 100px;
+
+}
+
+.contenedor-interno{
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2em 2em 2em 2em;
+    flex-direction: column;
+}
+
+.tarjeta{
+    width: 100%;
 }
 
 .titulo1{
     display: flex;
     justify-content: center;
-    font-family: "Atkinson Hyperlegible", sans-serif;
     font-size: 40px;
-    color: var(--fondoOscuro);
+    font-family: var(--fuentePrincipal);
+    color: var(--fondoClaro);
 }
 
 .titulo2{
     display: flex;
     justify-content: center;
-    font-family: "Atkinson Hyperlegible", sans-serif;
     font-size: 35px;
-    color: var(--fondoOscuro);
+    font-family: var(--fuentePrincipal);
+    color: var(--fondoClaro);
 }
 
 .titulo3{
     display: flex;
     justify-content: start;
-    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-family: var(--fuentePrincipal);
     font-size: 30px;
     color: var(--fondoOscuro);
 }
@@ -52,9 +81,9 @@
 .subtitulo{
     display: flex;
     justify-content: center;
-    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-family: var(--fuentePrincipal);
     font-size: 16px;
-    color: var(--fondoOscuro);
+    color: var(--fondoClaro);
 }
 
 .texto{
@@ -64,3 +93,12 @@
     font-size: 20px;
     color: var(--fondoOscuro);
 }
+
+.texto-alternativo{
+    display: flex;
+    justify-content: start;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 20px;
+    color: var(--fondoClaro);
+}
+
