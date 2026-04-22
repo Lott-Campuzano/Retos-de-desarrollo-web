@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;
     background: transparent;
-    border: 0px solid black;
+    border: 0px solid var(--fondoOscuro);
     cursor: pointer;
     flex-direction: column;
 }
@@ -88,8 +88,8 @@
     height: 2em;
     width: 1em;
     border-radius: 10% 100% / 100% 100%;
-    background: linear-gradient(#8338ec, #3a86ff);
-    border: 0.5px solid #7448f0;
+    background: linear-gradient(var(--color4), var(--color6));
+    border: 0.5px solid var(--color5);
     z-index: 0;
     transition: width 0.2s ease, height 0.2s ease;
 }
@@ -100,8 +100,8 @@
 .cuatro{transform: rotate(180deg);}
 
 .boton:hover .petalo{
-    background: linear-gradient(#ff006e, #ffbe0b);
-    border: 0.5px solid #fb5607;
+    background: linear-gradient(var(--color3), var(--color1));
+    border: 0.5px solid var(--color2);
 }
 
 .boton:hover .flor{grid-template-columns: 1.5em 1.5em;}

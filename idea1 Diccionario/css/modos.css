@@ -1,15 +1,11 @@
 @media (prefers-color-scheme: dark ){
     @keyframes flare{
-        from{background: var(--color4);}
-        to{background: var(--color6);}
+        from{color: var(--color4);}
+        to{color: var(--color6);}
     }
 
     .fondo.adaptive{
-        animation-name: flare;
-        animation-duration: 30s;
-        background-color: var(--color4);
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
+        background-color: var(--fondoOscuro);
     }
 
 
@@ -19,12 +15,16 @@
 
     .titulo1.adaptive{
         font-family: var(--fuentePrincipal);
-        color: var(--fondoOscuro);
+        color: var(--color4);
+        animation-duration: 30s;
+        animation-name: flare;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
     }
 
     .titulo2.adaptive{
         font-family: var(--fuentePrincipal);
-        color: var(--fondoOscuro);
+        color: var(--fondoClaro);
     }
 
     .titulo3.adaptive{
@@ -37,7 +37,7 @@
         justify-content: center;
         font-family: var(--fuentePrincipal);
         font-size: 16px;
-        color: var(--fondoOscuro);
+        color: var(--fondoClaro);
     }
 
     .texto.adaptive{
@@ -46,14 +46,6 @@
         font-family: "JetBrains Mono", monospace;
         font-size: 20px;
         color: var(--fondoClaro);
-    }
-
-    .texto-alternativo.adaptive{
-        display: flex;
-        justify-content: start;
-        font-family: "JetBrains Mono", monospace;
-        font-size: 20px;
-        color: var(--fondoOscuro);
     }
 
     .texto-boton.adaptive{

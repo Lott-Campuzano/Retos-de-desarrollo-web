@@ -1,6 +1,6 @@
 :root{
-    --fondoClaro: #fefefe;
-    --fondoOscuro: #010101;
+    --fondoClaro: #EFECE3;
+    --fondoOscuro: #212121;
     --color1:#ffbe0b;
     --color2:#fb5607;
     --color3:#ff006e;
@@ -16,19 +16,15 @@
 }
 
 @keyframes glow{
-    from{background: var(--color3);}
-    to{background: var(--color1);}
+    from{color: var(--color3);}
+    to{color: var(--color1);}
 }
 
 .fondo{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    animation-name: glow;
-    animation-duration: 30s;
-    background-color: var(--color3);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    background-color: var(--fondoClaro);
 }
 
 
@@ -38,7 +34,7 @@
     min-height: 300px;
     padding: 40px;
     border-radius: 20px;
-    background-color: var(--blurClaroInactivo);
+    background: var(--blurClaroActivo);
     backdrop-filter: blur(2px);
     box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
     margin: 100px;
@@ -59,7 +55,11 @@
     justify-content: center;
     font-size: 40px;
     font-family: var(--fuentePrincipal);
-    color: var(--fondoClaro);
+    color: var(--color3);
+    animation-duration: 30s;
+    animation-name: glow;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .titulo2{
@@ -67,7 +67,7 @@
     justify-content: center;
     font-size: 35px;
     font-family: var(--fuentePrincipal);
-    color: var(--fondoClaro);
+    color: var(--fondoOscuro);
 }
 
 .titulo3{
@@ -84,7 +84,7 @@
     justify-content: center;
     font-family: var(--fuentePrincipal);
     font-size: 16px;
-    color: var(--fondoClaro);
+    color: var(--fondoOscuro);
 }
 
 .texto{
@@ -93,13 +93,5 @@
     font-family: "JetBrains Mono", monospace;
     font-size: 20px;
     color: var(--fondoOscuro);
-}
-
-.texto-alternativo{
-    display: flex;
-    justify-content: start;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 20px;
-    color: var(--fondoClaro);
 }
 
