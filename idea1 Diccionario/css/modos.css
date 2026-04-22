@@ -14,7 +14,7 @@
 
 
     .contenedor.adaptive{
-        background-color: var(--blurOscuroActivo);
+        background-color: var(--blurOscuroInactivo);
     }
 
     .titulo1.adaptive{

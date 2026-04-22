@@ -7,13 +7,10 @@ function generaEnteroAleatorio(min, max) {
 }
 
 function mostrarFraseAleatoria() {
-    const indiceAleatorio = generaEnteroAleatorio(0, frases.length);
-    // obtengo la frase aleatoria usando el indíce
-    const fraseAleatoria = frases[indiceAleatorio];
-
-    // obtengo el contenido del html co la frase y el autor
-    termino.textContent = `"${fraseAleatoria.palabra}"`;
-    definicion.textContent = `${fraseAleatoria.significado}`;
+    const indiceAleatorio = generaEnteroAleatorio(0, diccionario.length);
+    const fraseAleatoria = diccionario[indiceAleatorio];
+    termino.textContent = `"${fraseAleatoria.termino}"`;
+    definicion.textContent = `${fraseAleatoria.definicion}`;
 }
 
 btnFrase.addEventListener('click', mostrarFraseAleatoria);
