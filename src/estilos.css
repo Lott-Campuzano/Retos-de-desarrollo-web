@@ -21,7 +21,6 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: start;
-    margin-left: 30px;
     font-family: var(--fuenteSecundaria);
     color: var(--fondoOscuro);
 }
@@ -29,6 +28,7 @@
 
 .fondo{
     background-color: var(--fondoClaro);
+    margin: 30px;
 }
 
 .titulo1{
@@ -119,5 +119,4 @@
         font-size: 20px;
         color: var(--fondoClaro);
     }
-
 }
