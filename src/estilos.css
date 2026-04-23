@@ -1,0 +1,124 @@
+:root{
+    --fondoClaro: #EFECE3;
+    --fondoOscuro: #212121;
+    --color1:#ffbe0b;
+    --color2:#fb5607;
+    --color3:#ff006e;
+    --color4:#8338EC;
+    --color5:#7448f0;
+    --color6:#3a86ff;
+    --blurClaroInactivo: rgba(255, 255, 255, 0.8);
+    --blurClaroActivo: rgba(255, 255, 255, 0.4);
+    --blurOscuroInactivo: rgba(0, 0, 0, 0.8);
+    --blurOscuroActivo: rgba(0, 0, 0, 0.4);
+    --fuentePrincipal: "Atkinson Hyperlegible", sans-serif;
+    --fuenteSecundaria: "JetBrains Mono", monospace;
+}
+
+
+.lista{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-family: var(--fuenteSecundaria);
+    color: var(--fondoOscuro);
+}
+
+
+.fondo{
+    background-color: var(--fondoClaro);
+}
+
+.titulo1{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: var(--fuentePrincipal);
+    color: var(--fondoOscuro);
+}
+
+.titulo2{
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    font-family: var(--fuentePrincipal);
+    color: var(--fondoOscuro);
+}
+
+.titulo3{
+    display: flex;
+    justify-content: start;
+    font-family: var(--fuentePrincipal);
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--fondoOscuro);
+}
+
+.subtitulo{
+    display: flex;
+    justify-content: center;
+    font-family: var(--fuentePrincipal);
+    font-size: 16px;
+    color: var(--fondoOscuro);
+}
+
+.texto{
+    display: flex;
+    justify-content: start;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 20px;
+    color: var(--fondoOscuro);
+}
+
+.reproductor{
+    font-family: var(--fuenteSecundaria);
+    font-size: 10px;
+    color: var(--fondoClaro);
+}
+
+@media (prefers-color-scheme: dark ){
+    .lista.adaptive{
+        font-family: var(--fuenteSecundaria);
+        color: var(--fondoClaro);
+    }
+
+
+    .fondo.adaptive{
+        background-color: var(--fondoOscuro);
+    }
+
+    .titulo1.adaptive{
+        font-family: var(--fuentePrincipal);
+        color: var(--fondoClaro);
+    }
+
+    .titulo2.adaptive{
+        font-family: var(--fuentePrincipal);
+        color: var(--fondoClaro);
+    }
+
+    .titulo3.adaptive{
+        font-family: var(--fuentePrincipal);
+        color: var(--fondoClaro);
+    }
+
+    .subtitulo.adaptive{
+        display: flex;
+        justify-content: center;
+        font-family: var(--fuentePrincipal);
+        font-size: 16px;
+        color: var(--fondoClaro);
+    }
+
+    .texto.adaptive{
+        display: flex;
+        justify-content: start;
+        font-family: var(--fuenteSecundaria);
+        font-size: 20px;
+        color: var(--fondoClaro);
+    }
+
+}
