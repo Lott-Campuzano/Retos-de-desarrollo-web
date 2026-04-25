@@ -15,12 +15,37 @@
     --fuenteSecundaria: "JetBrains Mono", monospace;
 }
 
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.enlace{
+    display: flex;
+    justify-content: start;
+    font-family: var(--fuenteSecundaria);
+    color: var(--fondoOscuro);
+    font-size: 20px;
+    transition-duration: 0s;
+    text-decoration: none;
+/*Ya se me ocurrira una propiedad*/
+}
+
+.enlace:hover{
+    color: var(--color1);
+}
+
 
 .lista{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-items: center;
+    align-items: center;
     font-family: var(--fuenteSecundaria);
     color: var(--fondoOscuro);
 }
@@ -30,12 +55,43 @@
     justify-content: center;
     font-size: 40px;
     font-family: var(--fuentePrincipal);
-    background: linear-gradient(var(--color3), var(--color1));
+    color: var(--color2);
 }
 
 .fondo{
     background-color: var(--fondoClaro);
     margin: 30px;
+    overflow-x: hidden;
+}
+
+.grano{
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: grano-animation 1s infinite;
+    opacity: 100%;
+    visibility: visible;
+    pointer-events: none;
+}
+
+@keyframes grano-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
 }
 
 .titulo1{
@@ -44,6 +100,14 @@
     font-size: 40px;
     font-family: var(--fuentePrincipal);
     color: var(--fondoOscuro);
+}
+
+.titulo-splash{
+    font-size: 40px;
+    font-family: var(--fuentePrincipal);
+    background: linear-gradient(90deg, var(--color3), var(--color1));
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .titulo2{
@@ -82,16 +146,9 @@
 .texto1{
     display: flex;
     justify-content: start;
-    margin: auto;
     font-family: "JetBrains Mono", monospace;
     font-size: 20px;
     color: var(--fondoOscuro);
-}
-
-.reproductor{
-    font-family: var(--fuenteSecundaria);
-    font-size: 10px;
-    color: var(--fondoClaro);
 }
 
 .splash{
@@ -102,7 +159,7 @@
     width: 100%;
     transform: translate(-50%, -50%);
     background: var(--fondoClaro);
-    transition: all ease-in-out 1s;
+    transition: ease-out 0.2s;
 }
 
 .hidden{
@@ -114,9 +171,8 @@
     cursor: pointer;
     font-family: "JetBrains Mono", monospace;
     font-size: 18px;
-    z-index: 1;
     color: var(--fondoOscuro);
-    padding: 5px 20px;
+    padding: 20px 20px;
     border-radius: 100px;
     background: var(--blurClaroInactivo);
     backdrop-filter: blur(2px);
@@ -124,7 +180,6 @@
     transition: grid-template-columns 0.2s ease;
     user-select: none;
     border-style: none;
-    cursor: pointer;
 }
 
 .boton:hover{
@@ -174,9 +229,6 @@
     }
 
     .texto1.adaptive{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
         font-family: "JetBrains Mono", monospace;
         font-size: 20px;
         color: var(--fondoClaro);
@@ -187,23 +239,19 @@
     }
 
     .boton.adaptive{
-        cursor: pointer;
-        font-family: "JetBrains Mono", monospace;
-        font-size: 18px;
-        z-index: 1;
         color: var(--fondoClaro);
-        padding: 5px 20px;
-        border-radius: 100px;
         background: var(--blurOscuroInactivo);
-        backdrop-filter: blur(2px);
-        box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
-        transition: grid-template-columns 0.2s ease;
-        user-select: none;
-        border-style: none;
-        cursor: pointer;
     }
 
     .boton:hover.adaptive{
         background: var(--blurOscuroActivo);
+    }
+
+    .enlace.adaptive{
+        color: var(--fondoClaro);
+    }
+
+    .enlace:hover.adaptive{
+        color: var(--color1);
     }
 }
