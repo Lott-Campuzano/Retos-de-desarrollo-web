@@ -25,6 +25,13 @@
     color: var(--fondoOscuro);
 }
 
+.degradado{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: var(--fuentePrincipal);
+    background: linear-gradient(var(--color3), var(--color1));
+}
 
 .fondo{
     background-color: var(--fondoClaro);
@@ -72,10 +79,56 @@
     color: var(--fondoOscuro);
 }
 
+.texto1{
+    display: flex;
+    justify-content: start;
+    margin: auto;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 20px;
+    color: var(--fondoOscuro);
+}
+
 .reproductor{
     font-family: var(--fuenteSecundaria);
     font-size: 10px;
     color: var(--fondoClaro);
+}
+
+.splash{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background: var(--fondoClaro);
+    transition: all ease-in-out 1s;
+}
+
+.hidden{
+    transition: 0.5s;
+    display: none;
+}
+
+.boton{
+    cursor: pointer;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 18px;
+    z-index: 1;
+    color: var(--fondoOscuro);
+    padding: 5px 20px;
+    border-radius: 100px;
+    background: var(--blurClaroInactivo);
+    backdrop-filter: blur(2px);
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+    transition: grid-template-columns 0.2s ease;
+    user-select: none;
+    border-style: none;
+    cursor: pointer;
+}
+
+.boton:hover{
+    background: var(--blurClaroActivo);
 }
 
 @media (prefers-color-scheme: dark ){
@@ -118,5 +171,39 @@
         font-family: var(--fuenteSecundaria);
         font-size: 20px;
         color: var(--fondoClaro);
+    }
+
+    .texto1.adaptive{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 20px;
+        color: var(--fondoClaro);
+    }
+
+    .splash.adaptive{
+        background: var(--fondoOscuro);
+    }
+
+    .boton.adaptive{
+        cursor: pointer;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 18px;
+        z-index: 1;
+        color: var(--fondoClaro);
+        padding: 5px 20px;
+        border-radius: 100px;
+        background: var(--blurOscuroInactivo);
+        backdrop-filter: blur(2px);
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+        transition: grid-template-columns 0.2s ease;
+        user-select: none;
+        border-style: none;
+        cursor: pointer;
+    }
+
+    .boton:hover.adaptive{
+        background: var(--blurOscuroActivo);
     }
 }
